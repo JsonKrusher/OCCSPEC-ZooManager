@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block title %}Educational Visits{% endblock %}
+
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+{% endblock %}
+
+{% block main_content %}
+<div class="text-white d-flex flex-column img-fluid align-items-center justify-content-center landing-page" id="landing-page-educational-visits">
+    <h1>Educational Visits</h1>
+    <p>Planning an educational visits. Find out here!</p>
+</div>
+
+<div class="container-fluid">
+    <div class="row p-4">
+        <div class="col-md-12 p-2">
+            <div class="text-center mt-2">
+                <h3>What do we have to offer?</h3>
+                <p>At RZA Zoo we offer special prices for educational visits!</p>        
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="container-fluid">
+                <h3>Discounted Prices</h3>
+                <p>We know fees can be expensive, that's why we reduce your tickets. Perfect for bulk buying!</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="container-fluid">
+                <h3>Endless Fun</h3>
+                <p>Our Safaria style campus have a range of attractions, rest assured your students will not be bored!</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="container-fluid">
+                <h3>Free Toilet Use</h3>
+                <p>We don't require you to pay for our toilets like other places might!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-white d-flex flex-column img-fluid justify-content-center landing-page text-center" id="landing-page-book-tickets">
+    <h1>Looking to book tickets?</h1>
+    <p>Looking for a day out! Sign-up to book your tickets now!</p>
+    <div class="container">
+        <a class="btn btn-dark" href="{% url 'register_page' %}">Sign-up</a>
+    </div>
+</div>
+
+<div class="text-white d-flex flex-column img-fluid justify-content-center landing-page text-center" id="landing-page-contact-us">
+    <h1>Want to get in touch?</h1>
+    <p>Looking to find out more about what we might have to offer? Having issues? Want to provide feedback? Enquire using our contact form</p>
+    <div class="container">
+        <a class="btn btn-dark" href="{% url 'contact_page' %}">Contact Us</a>
+    </div>
+</div>
+{% endblock %}

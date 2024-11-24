@@ -1,0 +1,15 @@
+-- ADMIN ACCOUNT --
+Email:        admin@rza.co.uk
+Password:     lgOR0c3-2kc
+
+-- TEST ACCOUNT --
+Email:        test.user@gmail.com
+Password:     dsIDS30dsr-3d
+
+-- Another User --
+Email: jacob@rza.co.uk
+Password: V3X6UUOnaSlGXpQU
+
+-- Another User --
+Email: jacob1@rza.co.uk
+Password: JbJLYgeWFcIbYI4H

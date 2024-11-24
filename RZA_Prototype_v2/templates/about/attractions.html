@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block title %}Attractions{% endblock %}
+
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+{% endblock %}
+
+{% block main_content %}
+<div class="text-primary fw-bolder d-flex align-items-center flex-column img-fluid justify-content-center landing-page" id="landing-page-attractions">
+    <h1>Our Attractions</h1>
+    <p>Find out about the attractions we offer!</p>
+</div>
+
+<div class="container-fluid">
+    <div class="row p-4">
+        <div class="col-md-12 p-2">
+            <div class="text-center mt-2">
+                <h3>What do we have to offer?</h3>
+                <p>At RZA Zoo we offer a range of attractions, explore our differnet attractions below! Fun for the whole family</p>        
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="container-fluid">
+                <h3>Safaria Campus</h3>
+                <p>Our Safaria style campus is perfect for all ages! You will find animals like lions roaming free in the area. Dont worry you are safe</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="container-fluid">
+                <h3>Children Zoo Area</h3>
+                <p>This play area is designed especially for kids. Rest assured, your child can interact with farm animals like our cows!</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="container-fluid">
+                <h3>Monkey Haven</h3>
+                <p>Dive deep into our cages and find our monkey's! Watch them climb over and greet you. You don't want to skip this part of the tour! </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-white d-flex flex-column img-fluid justify-content-center landing-page text-center" id="landing-page-book-tickets">
+    <h1>Looking to book tickets?</h1>
+    <p>Looking for a fun family trip? Or even a fun day out! Sign-up to book your tickets now!</p>
+    <div class="container">
+        <a class="btn btn-dark" href="{% url 'register_page' %}">Sign-up</a>
+    </div>
+</div>
+
+<div class="text-white d-flex flex-column img-fluid justify-content-center landing-page text-center" id="landing-page-contact-us">
+    <h1>Want to get in touch?</h1>
+    <p>Looking to find out more about what we might have to offer? Having issues? Want to provide feedback? Enquire using our contact form</p>
+    <div class="container">
+        <a class="btn btn-dark" href="{% url 'contact_page' %}">Contact Us</a>
+    </div>
+</div>
+{% endblock %}
