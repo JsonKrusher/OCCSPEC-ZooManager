@@ -1,0 +1,37 @@
+.landing-page {
+    min-height: 80vh !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#landing-page-home {
+    background-image: url('../images/zoo-bg.jpg');
+}
+
+#landing-page-attractions {
+    background-image: url('../images/leopards-attractions.jpg');
+}
+
+#landing-page-educational-visits {
+    background-image: url('../images/group-educational-visits.jpg');
+}
+
+#landing-page-facilities {
+    background-image: url('../images/prague-facilities.jpg');
+}
+
+#landing-page-book-tickets {
+    background-image: url('../images/cows-homepage.webp');
+}
+
+#landing-page-book-tickets a, #landing-page-contact-us a {
+    width: 50%;
+}
+
+#landing-page-animals {
+    background-image: url('../images/animals-homepage.png');
+}
+
+#landing-page-contact-us {
+    background-image: url('../images/contact-us-homepage.jpg');
+}

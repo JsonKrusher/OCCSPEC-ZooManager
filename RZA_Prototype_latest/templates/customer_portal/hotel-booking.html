@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}Book Hotel Room{% endblock %}
+
+
+{% block main_content %}
+<form class="form" action="{% url 'book_hotel_room' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn btn-dark" type="submit" value="Book Now!">
+</form>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block title %}Customer Portal{% endblock %}
+
+{% block main_content %}
+<h1 class="text-center mb-4">Welcome {{ request.user.full_name }}</h1>
+<div class="row mt-2">
+    <div class="col-md-6 text-center">
+        <h2>Manage Zoo Tickets</h2>
+        {% if tickets %}
+        <table class="table">
+            <thead>
+                <th>Ticket ID</th>
+                <th>Entry Date</th>
+                <th>Manage</th>
+            </thead>
+            {% for ticket in tickets %}
+            <tbody>
+                <td>{{ ticket.ticket_id }}</td>
+                <td>{{ ticket.entry_date }}</td>
+                <td><a href="ticket/delete/{{ ticket.ticket_id }}">Delete</a></td>
+            </tbody>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No tickets were found!</p>
+        {% endif %}
+        <a href="{% url 'book_ticket_page' %}">Book Zoo Ticket</a>
+    </div>
+    <div class="col-md-6 text-center">
+        <h2>Manage Hotel Booking</h2>
+        {% if bookings %}
+        <table class="table">
+            <thead>
+                <th>Booking ID</th>
+                <th>Booking In</th>
+                <th>Booking Out</th>
+                <th>Room ID</th>
+                <th>Guests</th>
+                <th>Manage</th>
+            </thead>
+            {% for booking in bookings %}
+            <tbody>
+                <td>{{ booking.booking_id }}</td>
+                <td>{{ booking.booking_in }}</td>
+                <td>{{ booking.booking_out }}</td>
+                <td>{{ booking.room_id.room_id }}</td>
+                <td>{{ booking.guests }}</td>
+                <td><a href="book/hotel-room/delete/{{ booking.booking_id }}">Delete</a></td>
+            </tbody>
+            {% endfor %}
+        </table>
+        {% endif %}
+        <a class="btn-dark" href="{% url 'book_hotel_room' %}">Book Hotel Room</a>
+    </div>
+    <div class="col-md-12 text-center mt-2">
+        <h2>Loyatly and Reward Scheme</h2>
+        <p>Under Construction!</p>
+    </div>
+</div>
+{% endblock %}

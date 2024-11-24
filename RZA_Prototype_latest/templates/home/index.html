@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+{% endblock %}
+
+
+{% block main_content %}
+<div class="text-white d-flex flex-column img-fluid align-items-center justify-content-center landing-page" id="landing-page-home">
+    <h1>Welcome to RZA Attractions!</h1>
+    <p>Your local Safaria-style zoo</p>
+</div>
+
+<div class="container-fluid text-center p-4">
+    <h2 class="text-decoration-underline">Why Us?</h2>
+    <div class="row p-4">
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div>
+                    <img class="text-center p-2" src="https://uxwing.com/wp-content/themes/uxwing/download/banking-finance/saving-icon.png" height="64px" width="64px" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Cost Effective</h3>
+                    <p class="card-text">We know family trips are expensive. We offer perks for family's including discounts and even a rewards program</p>
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div>
+                    <img class="text-center p-2" src="https://uxwing.com/wp-content/themes/uxwing/download/animals-and-birds/lion-face-icon.png" height="64px" width="64px" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Exciting Adventues</h3>
+                    <p class="card-text">A fun day out, we offer a range of attractions to keep you entertained for the whole day!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div>
+                    <img class="text-center p-2" src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/smiling-line-icon.png" height="64px" width="64px" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Happy Customers</h3>
+                    <p class="card-text">In a survey, we found 89% OF customers were satsified with their visit!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex flex-column img-fluid justify-content-center landing-page text-center" id="landing-page-animals">
+    <div class="bg-light p-2 border">
+        <h1>Find out about our attractions</h1>
+        <p>Looking to see what we offer?</p>
+        <div class="container">
+            <a class="btn btn-dark" href="{% url 'attractions_page' %}">Visit here</a>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid text-center mt-2 p-4">
+    <h2 class="text-decoration-underline">Fun for the whole family</h2>
+    <div class="row">
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div>
+                    <img class="text-center p-2" src="https://uxwing.com/wp-content/themes/uxwing/download/animals-and-birds/tiger-icon.png" height="64px" width="64px" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">See our lions</h3>
+                    <p class="card-text">Our lions can be scary but can you find them on our campus?</p>
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div>
+                    <img class="text-center p-2" src="https://uxwing.com/wp-content/themes/uxwing/download/animals-and-birds/elephant-face-icon.png" height="64px" width="64px" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Pet our elephants</h3>
+                    <p class="card-text">We allow you to not only see the elephants but interact with them!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div>
+                    <img class="text-center p-2" src="https://uxwing.com/wp-content/themes/uxwing/download/animals-and-birds/fox-icon.png" height="64px" width="64px" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Try find them all</h3>
+                    <p class="card-text">We challenge you to try to visit all the animals!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-white d-flex flex-column img-fluid justify-content-center landing-page text-center" id="landing-page-book-tickets">
+    <h1>Looking to book tickets?</h1>
+    <p>Looking for a fun family trip? Or even a fun day out! Sign-up to book your tickets now!</p>
+    <div class="container">
+        <a class="btn btn-dark" href="{% url 'register_page' %}">Sign-up</a>
+    </div>
+</div>
+
+<div class="text-white d-flex flex-column img-fluid justify-content-center landing-page text-center" id="landing-page-contact-us">
+    <h1>Want to get in touch?</h1>
+    <p>Looking to find out more about what we might have to offer? Having issues? Want to provide feedback? Enquire using our contact form</p>
+    <div class="container">
+        <a class="btn btn-dark" href="{% url 'contact_page' %}">Contact Us</a>
+    </div>
+</div>
+{% endblock %}
